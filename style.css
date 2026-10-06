@@ -1,0 +1,718 @@
+```css
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at top right, #3b176d, transparent 35%),
+        #050308;
+
+    color: #ffffff;
+
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+span {
+    color: #a855f7;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+.cabecalho {
+    width: 100%;
+
+    padding: 22px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #ffffff12;
+
+    position: sticky;
+    top: 0;
+
+    background: #050308e8;
+
+    backdrop-filter: blur(10px);
+
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #a855f7;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu a {
+    color: #b8b0c7;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #c084fc;
+}
+
+
+/* ================================
+   BOTÕES
+================================ */
+
+.botao {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #6d28d9,
+        #a855f7
+    );
+
+    color: white;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 30px #7e22ce66;
+}
+
+.botao.pequeno {
+    padding: 9px 18px;
+}
+
+.botao.secundario {
+    background: transparent;
+
+    border: 1px solid #6d28d966;
+}
+
+.botoes {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 700px;
+
+    padding: 80px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.hero-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.tag {
+    color: #c084fc;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #a855f7;
+}
+
+.descricao {
+    max-width: 600px;
+
+    color: #aaa2b5;
+
+    font-size: 18px;
+}
+
+
+/* ================================
+   ILUSTRAÇÃO
+================================ */
+
+.hero-imagem {
+    flex: 1;
+
+    min-height: 450px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.circulo {
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #7e22ce55,
+            #4c1d9525,
+            transparent 70%
+        );
+
+    border: 1px solid #a855f733;
+
+    position: absolute;
+}
+
+.superpoder {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 90px;
+
+    background: #100817;
+
+    border: 1px solid #a855f744;
+
+    box-shadow:
+        0 0 70px #7e22ce77;
+
+    animation: flutuar 3s ease-in-out infinite;
+
+    z-index: 2;
+}
+
+
+/* ================================
+   ANIMAÇÃO
+================================ */
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(3deg);
+    }
+}
+
+
+/* ================================
+   MINI CARDS
+================================ */
+
+.mini-card {
+    position: absolute;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    background: #100817;
+
+    border: 1px solid #a855f733;
+
+    box-shadow: 0 10px 30px #00000066;
+
+    font-size: 14px;
+}
+
+.card-1 {
+    top: 60px;
+    right: 30px;
+}
+
+.card-2 {
+    bottom: 70px;
+    left: 20px;
+}
+
+.card-3 {
+    bottom: 30px;
+    right: 50px;
+}
+
+
+/* ================================
+   SEÇÕES
+================================ */
+
+.secao {
+    padding: 100px 7%;
+}
+
+.titulo-secao {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+}
+
+.titulo-secao h2 {
+    font-size: 45px;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+}
+
+.titulo-secao > p:last-child {
+    color: #aaa2b5;
+}
+
+
+/* ================================
+   CARDS - GRID
+================================ */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.card {
+    position: relative;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: #0e0a14;
+
+    border: 1px solid #ffffff10;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 50px #00000088;
+
+    border-color: #a855f766;
+}
+
+.card.destaque {
+    border-color: #7e22ce;
+}
+
+.icone {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #aaa2b5;
+
+    min-height: 120px;
+}
+
+.preco {
+    font-size: 30px;
+
+    font-weight: bold;
+
+    margin: 25px 0;
+
+    color: #c084fc;
+}
+
+.card-botao {
+    width: 100%;
+
+    text-align: center;
+}
+
+.selo {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #6d28d9;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* ================================
+   COMO FUNCIONA
+================================ */
+
+.funcionamento {
+    background: #09060d;
+}
+
+.etapas {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    gap: 30px;
+}
+
+.etapa {
+    flex: 1;
+
+    padding: 30px;
+
+    border-left: 2px solid #7e22ce;
+}
+
+.numero {
+    color: #c084fc;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.etapa h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.etapa p {
+    color: #aaa2b5;
+}
+
+
+/* ================================
+   DEPOIMENTOS
+================================ */
+
+.depoimentos {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.depoimento {
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: #0e0a14;
+
+    border: 1px solid #ffffff10;
+}
+
+.estrelas {
+    color: #c084fc;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.depoimento p {
+    color: #d5d0db;
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+}
+
+.depoimento strong {
+    display: block;
+}
+
+.depoimento span {
+    color: #817789;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   CTA
+================================ */
+
+.cta {
+    margin: 50px 7% 100px;
+
+    padding: 80px 30px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle,
+            #7e22ce44,
+            #170b25,
+            transparent 75%
+        );
+
+    border: 1px solid #7e22ce66;
+}
+
+.cta h2 {
+    font-size: 50px;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.cta p:not(.tag) {
+    max-width: 600px;
+
+    margin: 20px auto 30px;
+
+    color: #aaa2b5;
+}
+
+
+/* ================================
+   RODAPÉ
+================================ */
+
+.rodape {
+    padding: 50px 7%;
+
+    border-top: 1px solid #ffffff12;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.rodape p {
+    color: #817789;
+
+    margin-top: 8px;
+}
+
+.rodape-info {
+    text-align: right;
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        padding: 60px 20px;
+
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .descricao {
+        margin: auto;
+    }
+
+    .botoes {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .hero-imagem {
+        width: 100%;
+
+        min-height: 350px;
+    }
+
+    .circulo {
+        width: 280px;
+        height: 280px;
+    }
+
+    .superpoder {
+        width: 140px;
+        height: 140px;
+
+        font-size: 70px;
+    }
+
+    .mini-card {
+        font-size: 11px;
+
+        padding: 8px 10px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .etapas {
+        flex-direction: column;
+    }
+
+    .depoimentos {
+        grid-template-columns: 1fr;
+    }
+
+    .secao {
+        padding: 70px 20px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 36px;
+    }
+
+    .cta {
+        margin: 30px 20px 70px;
+
+        padding: 60px 20px;
+    }
+
+    .cta h2 {
+        font-size: 38px;
+    }
+
+    .rodape {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .rodape-info {
+        text-align: center;
+    }
+}
+```
